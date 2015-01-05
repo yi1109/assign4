@@ -342,10 +342,12 @@ void checkWinLose() {
     if (ship.life==0) {
       status = GAME_LOSE;
     }     
-      if(dieNum == 2){
-        status = GAME_WIN;
-        } 
-      }        
+      else if( point>= deadpoint*n){
+     
+    status = GAME_WIN;
+     }
+   
+}   
 void winAnimate() {
   int x = int(random(128))+70;
   fill(x, x, 256);
